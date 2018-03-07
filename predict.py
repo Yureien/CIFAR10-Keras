@@ -5,7 +5,13 @@ import cv2
 import numpy as np
 from keras.models import load_model
 
-USAGE = "USAGE: idk."
+USAGE = """
+USAGE:
+    ./get_data.sh
+    pip install -r requirements.txt
+    python train.py # This took ~2 hours on my laptop with a NVIDIA GT 940M GPU.
+    python predict.py /path/to/sample/image.png
+"""
 TRAINED_MODEL_FILE = "trained_model.h5"
 with open("dataset/cifar-10-batches-py/batches.meta", 'rb') as f:
     LABELS = pickle.load(f)['label_names']
